@@ -1,4 +1,6 @@
-# GitHub's VS Code themes
+# KurBo VS Code themes
+
+This is a fork of the GitHub themes with a lot more extensive source code colouring.
 
 ![GitHub VS Code theme](https://user-images.githubusercontent.com/378023/132220037-3cd3e777-55a6-445f-9a2e-da6020ebd78d.png)
 
@@ -7,18 +9,13 @@
 1. Go to [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme).
 2. Click on the "Install" button.
 3. Then [select a theme](https://code.visualstudio.com/docs/getstarted/themes#_selecting-the-color-theme). The GitHub themes try to match the themes available in [github.com's settings](https://github.com/settings/appearance):
-    - `GitHub Light Default`
-    - `GitHub Light High Contrast` ✨ new ✨
-    - `GitHub Light Colorblind` ✨ new ✨
-    - `GitHub Dark Default`
-    - `GitHub Dark High Contrast`
-    - `GitHub Dark Colorblind` ✨ new ✨
-    - `GitHub Dark Dimmed`
-
-Additionally, there are also two older themes. **Note**: They might not get updated frequently and are kept for legacy reasons:
-
-- `GitHub Light` (legacy)
-- `GitHub Dark` (legacy)
+    - `KurBo Light`
+    - `KurBo Light High Contrast` ✨ new ✨
+    - `KurBo Light Colorblind` ✨ new ✨
+    - `KurBo Dark`
+    - `KurBo Dark High Contrast`
+    - `KurBo Dark Colorblind` ✨ new ✨
+    - `KurBo Dark Dimmed`
 
 ## Override this theme
 
@@ -29,7 +26,7 @@ To override this (or any other) theme in your personal config file, please follo
 1. Clone and open this [repo](https://github.com/primer/github-vscode-theme) in VS Code
 2. Run `yarn` to install the dependencies.
 3. Press `F5` to open a new window with your extension loaded
-4. Open `Code > Preferences > Color Theme` [`⌘k ⌘t`] and pick the "GitHub ..." theme you want to test. Note: It seems this has to be done 2x because the first time it switches back to the default light theme. This might be a bug?
+4. Open `Code > Preferences > Color Theme` [`⌘k ⌘t`] and pick the "KurBo ..." theme you want to test. Note: It seems this has to be done 2x because the first time it switches back to the default light theme. This might be a bug?
 5. Make changes to the [`/src/theme.js`](https://github.com/primer/github-vscode-theme/blob/master/src/theme.js) file.
     - **UI**: For all changes to the "outer UI", like (status bar, file navigation etc.), take a look at the [Theme Color](https://code.visualstudio.com/api/references/theme-color) reference.
     - **Syntax**: For changes to the "code highlighting", examine the syntax scopes by invoking the [`Developer: Inspect Editor Tokens and Scopes`](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector) command from the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) in the Extension Development Host window.

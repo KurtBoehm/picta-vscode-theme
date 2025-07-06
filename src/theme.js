@@ -464,16 +464,25 @@ function getTheme({ theme, name }) {
         },
       },
       {
+        name: "Constant, Decorator, etc.",
         scope: [
           "constant",
           "entity.name.constant",
-          "variable.other.constant",
-          "variable.other.enummember",
+          "entity.name.decorator",
+          "punctuation.definition.decorator.python",
           "variable.language",
           "entity",
         ],
         settings: {
           foreground: lightDark(scale.blue[6], scale.blue[2]),
+        },
+      },
+      {
+        name: "Enumeration Member",
+        scope: "variable.other.enummember",
+        settings: {
+          foreground: lightDark(scale.blue[6], scale.blue[2]),
+          fontStyle: "italic",
         },
       },
       {
@@ -488,7 +497,6 @@ function getTheme({ theme, name }) {
       },
       {
         scope: [
-          "variable.parameter.function",
           "meta.jsx.children",
           "meta.block",
           "meta.tag.attributes",
@@ -501,9 +509,22 @@ function getTheme({ theme, name }) {
         },
       },
       {
-        scope: "entity.name.function",
+        name: "Function",
+        scope: [
+          "entity.name.function",
+          "keyword.other.operator.overload",
+          "support.function",
+        ],
         settings: {
-          foreground: lightDark(scale.purple[5], scale.purple[2]),
+          foreground: lightDark(scale.green[5], scale.green[2]),
+        },
+      },
+      {
+        name: "Member Function",
+        scope: "entity.name.function.member",
+        settings: {
+          foreground: lightDark(scale.green[5], scale.green[2]),
+          fontStyle: "italic",
         },
       },
       {
@@ -513,6 +534,7 @@ function getTheme({ theme, name }) {
         },
       },
       {
+        name: "Keyword",
         scope: "keyword",
         settings: {
           foreground: lightDark(scale.red[5], scale.red[3]),
@@ -535,6 +557,7 @@ function getTheme({ theme, name }) {
         },
       },
       {
+        name: "String",
         scope: ["string", "string punctuation.section.embedded source"],
         settings: {
           foreground: lightDark(scale.blue[8], scale.blue[1]),
@@ -553,15 +576,78 @@ function getTheme({ theme, name }) {
         },
       },
       {
-        scope: "variable",
+        name: "Namespace",
+        scope: "entity.name.namespace",
         settings: {
-          foreground: lightDark(scale.orange[6], scale.orange[2]),
+          foreground: lightDark(scale.pink[5], scale.pink[2]),
         },
       },
       {
-        scope: "variable.other",
+        name: "Type",
+        scope: [
+          "entity.name",
+          "entity.name.function.definition.special.member.destructor",
+          "entity.name.namespace.cpp",
+          "entity.name.scope-resolution",
+          "entity.name.type",
+          "storage.type.built-in",
+          "storage.type.built-in.primitive",
+          "support.class",
+          "support.type",
+        ],
         settings: {
-          foreground: color.fg.default,
+          foreground: lightDark(scale.purple[6], scale.purple[2]),
+        },
+      },
+      {
+        name: "Type Parameter",
+        scope: "entity.name.type.parameter",
+        settings: {
+          foreground: lightDark(scale.purple[6], scale.purple[2]),
+          fontStyle: "bold",
+        },
+      },
+      {
+        name: "Variable",
+        scope: "variable",
+        settings: {
+          foreground: lightDark(scale.orange[4], scale.orange[2]),
+        },
+      },
+      {
+        name: "Constant",
+        scope: ["variable.other.constant"],
+        settings: {
+          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          fontStyle: "underline",
+        },
+      },
+      {
+        name: "Property",
+        scope: ["variable.other.property"],
+        settings: {
+          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          fontStyle: "italic",
+        },
+      },
+      {
+        name: "Constant Property",
+        scope: ["variable.other.constant.property"],
+        settings: {
+          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          fontStyle: "italic underline",
+        },
+      },
+      {
+        name: "Parameter",
+        scope: [
+          "variable.parameter",
+          "variable.parameter.function",
+          "entity.name.section.latex",
+        ],
+        settings: {
+          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          fontStyle: "bold",
         },
       },
       {
@@ -806,6 +892,25 @@ function getTheme({ theme, name }) {
         },
       },
     ],
+    semanticHighlighting: true,
+    semanticTokenColors: {
+      concept: {
+        foreground: lightDark(scale.coral[4], scale.coral[2]),
+      },
+      "function.classScope": {
+        foreground: lightDark(scale.green[5], scale.green[2]),
+        fontStyle: "italic",
+      },
+      "parameter.readonly": {
+        foreground: lightDark(scale.orange[4], scale.orange[2]),
+        fontStyle: "bold underline",
+      },
+      // a work-around for clangd’s handling of non-type template parameters
+      "typeParameter.readonly": {
+        foreground: lightDark(scale.orange[4], scale.orange[2]),
+        fontStyle: "bold underline",
+      },
+    },
   };
 }
 

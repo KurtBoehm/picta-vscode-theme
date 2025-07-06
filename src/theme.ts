@@ -1,5 +1,5 @@
-const chroma = require("chroma-js");
-const { getColors } = require("./colors");
+import chroma from "chroma-js";
+import { getColors, Colors, Theme } from "./colors.js";
 
 // Choosing colors from primer/primitives
 // There are multiple ways to define what color is used:
@@ -9,44 +9,42 @@ const { getColors } = require("./colors");
 // 2. Color scale
 //    e.g. "textLink.foreground": scale.blue[5],
 // 3. Per theme. Useful when a certain theme needs an exception
-//    e.g. "textLink.foreground": themes({ light: scale.blue[5], light_high_contrast: scale.blue[5], light_colorblind: scale.blue[5], dark: scale.blue[2], dark_high_contrast: scale.blue[3], dark_colorblind: scale.blue[2], dark_dimmed: scale.blue[3] }),
+//    e.g. "textLink.foregrou4nd": themes({ light: scale.blue[5], light_high_contrast: scale.blue[5], light_colorblind: scale.blue[5], dark: scale.blue[2], dark_high_contrast: scale.blue[3], dark_colorblind: scale.blue[2], dark_dimmed: scale.blue[3] }),
 
-function getTheme({ theme, name }) {
-  const themes = (options) => options[theme]; // Usage: themes({ light: "lightblue", light_high_contrast: "lightblue", light_colorblind: "lightblue", dark: "darkblue", dark_high_contrast: "darkblue", dark_colorblind: "darkblue", dark_dimmed: "royalblue" })
+interface Options {
+  light?: string | undefined;
+  light_colorblind?: string | undefined;
+  dark?: string | undefined;
+  dark_colorblind?: string | undefined;
+  dark_dimmed?: string | undefined;
+}
+
+export default function getTheme({ theme, name }: { theme: Theme; name: string }) {
+  // Usage: themes({ light: "lightblue", light_high_contrast: "lightblue", light_colorblind: "lightblue", dark: "darkblue", dark_high_contrast: "darkblue", dark_colorblind: "darkblue", dark_dimmed: "royalblue" })
+  const themes = (options: Options) => options[theme];
   const rawColors = getColors(theme);
   const color = changeColorToHexAlphas(rawColors);
   const scale = color.scale; // Usage: scale.blue[6]
 
-  const onlyDark = (color) => {
+  const onlyDark = (color: string) => {
     return themes({
       dark: color,
-      dark_high_contrast: color,
       dark_colorblind: color,
       dark_dimmed: color,
     });
   };
 
-  const onlyHighContrast = (color) => {
-    return themes({ light_high_contrast: color, dark_high_contrast: color });
-  };
-
-  const onlyDarkHighContrast = (color) => {
-    return themes({ dark_high_contrast: color });
-  };
-
-  const lightDark = (light, dark) => {
+  const lightDark = (light: string, dark: string) => {
     return themes({
       light: light,
-      light_high_contrast: light,
       light_colorblind: light,
       dark: dark,
-      dark_high_contrast: dark,
       dark_colorblind: dark,
       dark_dimmed: dark,
     });
   };
 
-  const alpha = (color, alpha) => {
+  const alpha = (color: string, alpha: number) => {
     return chroma(color)
       .alpha(alpha)
       .hex();
@@ -190,7 +188,6 @@ function getTheme({ theme, name }) {
       "editorWidget.background": color.canvas.overlay,
       "editor.foldBackground": alpha(color.neutral.emphasis, 0.1),
       "editor.lineHighlightBackground": color.codemirror.activelineBg,
-      "editor.lineHighlightBorder": onlyDarkHighContrast(color.accent.fg),
       "editorLineNumber.foreground": lightDark(scale.gray[4], scale.gray[4]),
       "editorLineNumber.activeForeground": color.fg.default,
       "editorIndentGuide.background": alpha(color.fg.default, 0.12),
@@ -210,14 +207,6 @@ function getTheme({ theme, name }) {
       "editor.wordHighlightStrongBorder": alpha(color.neutral.muted, 0.6),
       "editorBracketMatch.background": alpha(scale.green[3], 0.25),
       "editorBracketMatch.border": alpha(scale.green[3], 0.6),
-      // text selection for High Contrast themes
-      "editor.selectionForeground": onlyHighContrast(color.fg.onEmphasis),
-      "editor.selectionBackground": onlyHighContrast(
-        color.neutral.emphasisPlus
-      ),
-      "editor.inactiveSelectionBackground": onlyHighContrast(
-        color.neutral.emphasis
-      ),
 
       "editorInlayHint.background": alpha(scale.gray[3], 0.2),
       "editorInlayHint.foreground": color.fg.muted,
@@ -377,7 +366,10 @@ function getTheme({ theme, name }) {
         scale.orange[6],
         scale.orange[3]
       ),
-      "symbolIcon.constantForeground": lightDark(scale.green[6], scale.green),
+      "symbolIcon.constantForeground": lightDark(
+        scale.green[6],
+        scale.green[3]
+      ),
 
       "terminal.foreground": color.fg.default,
       "terminal.ansiBlack": color.ansi.black,
@@ -449,7 +441,6 @@ function getTheme({ theme, name }) {
       "welcomePage.buttonBackground": color.btn.bg,
       "welcomePage.buttonHoverBackground": color.btn.hoverBg,
     },
-    semanticHighlighting: true,
     tokenColors: [
       {
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
@@ -916,8 +907,7 @@ function getTheme({ theme, name }) {
 
 // Convert to hex
 // VS Code doesn't support other formats like hsl, rgba etc.
-
-function changeColorToHexAlphas(obj) {
+function changeColorToHexAlphas(obj: Colors): Colors {
   if (typeof obj === "object") {
     for (var keys in obj) {
       if (typeof obj[keys] === "object") {

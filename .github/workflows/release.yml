@@ -2,11 +2,11 @@ name: Release
 on:
   push:
     branches:
-      - 'main'
+      - "main"
 jobs:
   release:
     name: Final
-    if: ${{ github.repository == 'primer/github-vscode-theme' }}
+    if: ${{ github.repository == 'KurtBoehm/kurbo-vscode-theme' }}
 
     runs-on: ubuntu-latest
     steps:

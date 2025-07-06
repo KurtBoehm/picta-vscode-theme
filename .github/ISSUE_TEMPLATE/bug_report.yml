@@ -33,7 +33,7 @@ body:
     id: version
     attributes:
       label: Version
-      description: 'What version of `github-vscode-theme` are you using?'
+      description: 'What version of `kurbo-vscode-theme` are you using?'
       placeholder: v6.3.2
     validations:
       required: true

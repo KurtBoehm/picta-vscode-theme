@@ -1,9 +1,9 @@
 {
-  "name": "github-vscode-theme",
+  "name": "kurbo-vscode-theme",
   "displayName": "KurBo Theme",
   "description": "KurBo theme for VS Code",
   "version": "6.3.5",
-  "publisher": "Kurt Böhm",
+  "publisher": "KurtBoehm",
   "license": "MIT",
   "icon": "icon.png",
   "galleryBanner": {
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/primer/github-vscode-theme"
+    "url": "https://github.com/KurtBoehm/kurbo-vscode-theme"
   },
   "bugs": {
-    "url": "https://github.com/primer/github-vscode-theme/issues"
+    "url": "https://github.com/KurtBoehm/kurbo-vscode-theme/issues"
   },
   "engines": {
     "vscode": "^1.43.0"
@@ -39,11 +39,6 @@
         "path": "./themes/light-default.json"
       },
       {
-        "label": "KurBo Light High Contrast",
-        "uiTheme": "hc-light",
-        "path": "./themes/light-high-contrast.json"
-      },
-      {
         "label": "KurBo Light Colorblind (Beta)",
         "uiTheme": "vs",
         "path": "./themes/light-colorblind.json"
@@ -52,11 +47,6 @@
         "label": "KurBo Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/dark-default.json"
-      },
-      {
-        "label": "KurBo Dark High Contrast",
-        "uiTheme": "hc-black",
-        "path": "./themes/dark-high-contrast.json"
       },
       {
         "label": "KurBo Dark Colorblind (Beta)",
@@ -74,22 +64,21 @@
     "@changesets/changelog-github": "^0.4.1",
     "@changesets/cli": "^2.17.0",
     "@primer/primitives": "7.10.0",
+    "@types/chroma-js": "^3.1.1",
     "chroma-js": "^2.1.2",
     "color": "^3.1.2",
-    "nodemon": "^2.0.3",
+    "tsx": "^4.20.3",
     "vsce": "^1.100.1"
   },
   "scripts": {
-    "start": "nodemon --watch src src/index.js",
-    "build": "node src/index.js && mkdir -p build",
-    "package": "vsce package -o ./build/github-vscode-theme.vsix",
+    "start": "tsx watch src src/index.ts",
+    "build": "npx tsx src/index.ts && mkdir -p build",
+    "package": "vsce package -o ./build/kurbo-vscode-theme.vsix",
     "prepublishOnly": "npm run build && vsce publish",
     "release": "changeset publish"
   },
   "__metadata": {
-    "id": "7328a705-91fc-49e6-8293-da6f112e482d",
-    "publisherDisplayName": "Kurt Böhm",
-    "publisherId": "7c1c19cd-78eb-4dfb-8999-99caf7679002"
+    "publisherDisplayName": "Kurt Böhm"
   },
   "publishConfig": {
     "access": "public"

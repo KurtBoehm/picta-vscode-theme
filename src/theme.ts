@@ -19,7 +19,13 @@ interface Options {
   dark_dimmed?: string | undefined;
 }
 
-export default function getTheme({ theme, name }: { theme: Theme; name: string }) {
+export default function getTheme({
+  theme,
+  name,
+}: {
+  theme: Theme;
+  name: string;
+}) {
   // Usage: themes({ light: "lightblue", light_high_contrast: "lightblue", light_colorblind: "lightblue", dark: "darkblue", dark_high_contrast: "darkblue", dark_colorblind: "darkblue", dark_dimmed: "royalblue" })
   const themes = (options: Options) => options[theme];
   const rawColors = getColors(theme);
@@ -455,11 +461,12 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
         },
       },
       {
-        name: "Constant, Decorator, etc.",
+        name: "Constant, Decorator, Macro, etc.",
         scope: [
           "constant",
           "entity.name.constant",
           "entity.name.decorator",
+          "entity.name.function.preprocessor",
           "punctuation.definition.decorator.python",
           "variable.language",
           "entity",
@@ -591,23 +598,15 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
         },
       },
       {
-        name: "Type Parameter",
-        scope: "entity.name.type.parameter",
-        settings: {
-          foreground: lightDark(scale.purple[6], scale.purple[2]),
-          fontStyle: "bold",
-        },
-      },
-      {
         name: "Variable",
-        scope: "variable",
+        scope: ["variable", "support.variable"],
         settings: {
           foreground: lightDark(scale.orange[4], scale.orange[2]),
         },
       },
       {
         name: "Constant",
-        scope: ["variable.other.constant"],
+        scope: ["variable.other.constant", "support.constant"],
         settings: {
           foreground: lightDark(scale.orange[4], scale.orange[2]),
           fontStyle: "underline",
@@ -615,7 +614,7 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
       },
       {
         name: "Property",
-        scope: ["variable.other.property"],
+        scope: "variable.other.property",
         settings: {
           foreground: lightDark(scale.orange[4], scale.orange[2]),
           fontStyle: "italic",
@@ -623,7 +622,7 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
       },
       {
         name: "Constant Property",
-        scope: ["variable.other.constant.property"],
+        scope: "variable.other.constant.property",
         settings: {
           foreground: lightDark(scale.orange[4], scale.orange[2]),
           fontStyle: "italic underline",
@@ -715,18 +714,6 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
         },
       },
       {
-        scope: "support.constant",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2]),
-        },
-      },
-      {
-        scope: "support.variable",
-        settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2]),
-        },
-      },
-      {
         scope: "support.type.property-name.json",
         settings: {
           foreground: lightDark(scale.green[6], scale.green[1]),
@@ -772,13 +759,13 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
         },
       },
       {
-        scope: ["markup.underline"],
+        scope: "markup.underline",
         settings: {
           fontStyle: "underline",
         },
       },
       {
-        scope: ["markup.strikethrough"],
+        scope: "markup.strikethrough",
         settings: {
           fontStyle: "strikethrough",
         },
@@ -801,7 +788,7 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
         },
       },
       {
-        scope: ["punctuation.section.embedded"],
+        scope: "punctuation.section.embedded",
         settings: {
           foreground: lightDark(scale.red[5], scale.red[3]),
         },
@@ -895,6 +882,10 @@ export default function getTheme({ theme, name }: { theme: Theme; name: string }
       "parameter.readonly": {
         foreground: lightDark(scale.orange[4], scale.orange[2]),
         fontStyle: "bold underline",
+      },
+      typeParameter: {
+        foreground: lightDark(scale.purple[6], scale.purple[2]),
+        fontStyle: "bold",
       },
       // a work-around for clangd’s handling of non-type template parameters
       "typeParameter.readonly": {

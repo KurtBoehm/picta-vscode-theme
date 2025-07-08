@@ -43,6 +43,15 @@ export function getColors(theme: Theme): Colors {
   }
 }
 
-module.exports = {
-  getColors,
+export const pictaColors = {
+  red: { medium: "#ce2233", light: "#ff7a80" },
+  orange: { medium: "#d76500", light: "#ff915d" },
+  yellow: { medium: "#c48300", light: "#ffb961" },
+  olive: { medium: "#868c00", light: "#cbd35b" },
+  green: { medium: "#228844", light: "#57d97c" },
+  cyan: { medium: "#008a92", light: "#52d2dd" },
+  blue: { medium: "#0052ac", light: "#75bfff" },
+  indigo: { medium: "#633ac1", light: "#ac9fff" },
+  purple: { medium: "#ab44c5", light: "#e590ff" },
+  pink: { medium: "#d33887", light: "#ff9ec5" },
 };

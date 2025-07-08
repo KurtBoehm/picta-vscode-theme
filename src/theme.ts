@@ -1,5 +1,5 @@
 import chroma from "chroma-js";
-import { getColors, Colors, Theme } from "./colors.js";
+import { getColors, pictaColors, Colors, Theme } from "./colors.js";
 
 // Choosing colors from primer/primitives
 // There are multiple ways to define what color is used:
@@ -49,6 +49,8 @@ export default function getTheme({
       dark_dimmed: dark,
     });
   };
+  const pictaLightDark = (p: { medium: string; light: string }) =>
+    lightDark(p.medium, p.light);
 
   const alpha = (color: string, alpha: number) => {
     return chroma(color)
@@ -457,7 +459,7 @@ export default function getTheme({
       {
         scope: ["constant.other.placeholder", "constant.character"],
         settings: {
-          foreground: lightDark(scale.red[5], scale.red[3]),
+          foreground: pictaLightDark(pictaColors.red),
         },
       },
       {
@@ -472,14 +474,14 @@ export default function getTheme({
           "entity",
         ],
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2]),
+          foreground: pictaLightDark(pictaColors.blue),
         },
       },
       {
         name: "Enumeration Member",
         scope: "variable.other.enummember",
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2]),
+          foreground: pictaLightDark(pictaColors.blue),
           fontStyle: "italic",
         },
       },
@@ -514,14 +516,14 @@ export default function getTheme({
           "support.function",
         ],
         settings: {
-          foreground: lightDark(scale.green[5], scale.green[2]),
+          foreground: pictaLightDark(pictaColors.green),
         },
       },
       {
         name: "Member Function",
         scope: "entity.name.function.member",
         settings: {
-          foreground: lightDark(scale.green[5], scale.green[2]),
+          foreground: pictaLightDark(pictaColors.green),
           fontStyle: "italic",
         },
       },
@@ -535,13 +537,13 @@ export default function getTheme({
         name: "Keyword",
         scope: "keyword",
         settings: {
-          foreground: lightDark(scale.red[5], scale.red[3]),
+          foreground: pictaLightDark(pictaColors.red),
         },
       },
       {
         scope: ["storage", "storage.type"],
         settings: {
-          foreground: lightDark(scale.red[5], scale.red[3]),
+          foreground: pictaLightDark(pictaColors.red),
         },
       },
       {
@@ -564,20 +566,20 @@ export default function getTheme({
       {
         scope: "support",
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2]),
+          foreground: pictaLightDark(pictaColors.blue),
         },
       },
       {
         scope: "meta.property-name",
         settings: {
-          foreground: lightDark(scale.blue[6], scale.blue[2]),
+          foreground: pictaLightDark(pictaColors.blue),
         },
       },
       {
         name: "Namespace",
         scope: "entity.name.namespace",
         settings: {
-          foreground: lightDark(scale.pink[5], scale.pink[2]),
+          foreground: pictaLightDark(pictaColors.pink),
         },
       },
       {
@@ -594,21 +596,21 @@ export default function getTheme({
           "support.type",
         ],
         settings: {
-          foreground: lightDark(scale.purple[6], scale.purple[2]),
+          foreground: pictaLightDark(pictaColors.indigo),
         },
       },
       {
         name: "Variable",
         scope: ["variable", "support.variable"],
         settings: {
-          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          foreground: pictaLightDark(pictaColors.orange),
         },
       },
       {
         name: "Constant",
         scope: ["variable.other.constant", "support.constant"],
         settings: {
-          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          foreground: pictaLightDark(pictaColors.orange),
           fontStyle: "underline",
         },
       },
@@ -616,7 +618,7 @@ export default function getTheme({
         name: "Property",
         scope: "variable.other.property",
         settings: {
-          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          foreground: pictaLightDark(pictaColors.orange),
           fontStyle: "italic",
         },
       },
@@ -624,7 +626,7 @@ export default function getTheme({
         name: "Constant Property",
         scope: "variable.other.constant.property",
         settings: {
-          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          foreground: pictaLightDark(pictaColors.orange),
           fontStyle: "italic underline",
         },
       },
@@ -636,7 +638,7 @@ export default function getTheme({
           "entity.name.section.latex",
         ],
         settings: {
-          foreground: lightDark(scale.orange[4], scale.orange[2]),
+          foreground: pictaLightDark(pictaColors.orange),
           fontStyle: "bold",
         },
       },
@@ -873,24 +875,28 @@ export default function getTheme({
     semanticHighlighting: true,
     semanticTokenColors: {
       concept: {
-        foreground: lightDark(scale.coral[4], scale.coral[2]),
+        foreground: pictaLightDark(pictaColors.purple),
       },
       "function.classScope": {
-        foreground: lightDark(scale.green[5], scale.green[2]),
+        foreground: pictaLightDark(pictaColors.green),
         fontStyle: "italic",
       },
       "parameter.readonly": {
-        foreground: lightDark(scale.orange[4], scale.orange[2]),
+        foreground: pictaLightDark(pictaColors.orange),
         fontStyle: "bold underline",
       },
       typeParameter: {
-        foreground: lightDark(scale.purple[6], scale.purple[2]),
+        foreground: pictaLightDark(pictaColors.indigo),
         fontStyle: "bold",
       },
       // a work-around for clangd’s handling of non-type template parameters
-      "typeParameter.readonly": {
-        foreground: lightDark(scale.orange[4], scale.orange[2]),
+      "typeParameter.readonly:cpp": {
+        foreground: pictaLightDark(pictaColors.orange),
         fontStyle: "bold underline",
+      },
+      // clangd marks non-type dependent names this way
+      "unknown.dependentName:cpp": {
+        foreground: pictaLightDark(pictaColors.yellow)
       },
     },
   };

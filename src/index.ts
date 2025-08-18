@@ -1,29 +1,26 @@
 import { promises as fs } from "fs";
 import getTheme from "./theme";
 
-const lightDefaultTheme = getTheme({
+const lightTheme = getTheme({
   theme: "light",
   name: "KurBo Light",
+  extended: false,
+});
+const lightThemeEx = getTheme({
+  theme: "light",
+  name: "KurBo Light Extended",
+  extended: true,
 });
 
-const lightColorblindTheme = getTheme({
-  theme: "light_colorblind",
-  name: "KurBo Light Colorblind",
-});
-
-const darkDefaultTheme = getTheme({
+const darkTheme = getTheme({
   theme: "dark",
   name: "KurBo Dark",
+  extended: false,
 });
-
-const darkColorblindTheme = getTheme({
-  theme: "dark_colorblind",
-  name: "KurBo Dark Colorblind",
-});
-
-const darkDimmedTheme = getTheme({
-  theme: "dark_dimmed",
-  name: "KurBo Dark Dimmed",
+const darkThemeEx = getTheme({
+  theme: "dark",
+  name: "KurBo Dark Extended",
+  extended: true,
 });
 
 // Write themes
@@ -31,25 +28,15 @@ const darkDimmedTheme = getTheme({
 fs.mkdir("./themes", { recursive: true })
   .then(() =>
     Promise.all([
+      fs.writeFile("./themes/light.json", JSON.stringify(lightTheme, null, 2)),
       fs.writeFile(
-        "./themes/light-default.json",
-        JSON.stringify(lightDefaultTheme, null, 2)
+        "./themes/light-ex.json",
+        JSON.stringify(lightThemeEx, null, 2)
       ),
+      fs.writeFile("./themes/dark.json", JSON.stringify(darkTheme, null, 2)),
       fs.writeFile(
-        "./themes/light-colorblind.json",
-        JSON.stringify(lightColorblindTheme, null, 2)
-      ),
-      fs.writeFile(
-        "./themes/dark-default.json",
-        JSON.stringify(darkDefaultTheme, null, 2)
-      ),
-      fs.writeFile(
-        "./themes/dark-colorblind.json",
-        JSON.stringify(darkColorblindTheme, null, 2)
-      ),
-      fs.writeFile(
-        "./themes/dark-dimmed.json",
-        JSON.stringify(darkDimmedTheme, null, 2)
+        "./themes/dark-ex.json",
+        JSON.stringify(darkThemeEx, null, 2)
       ),
     ])
   )

@@ -36,27 +36,22 @@
       {
         "label": "KurBo Light",
         "uiTheme": "vs",
-        "path": "./themes/light-default.json"
+        "path": "./themes/light.json"
       },
       {
-        "label": "KurBo Light Colorblind (Beta)",
+        "label": "KurBo Light Extended",
         "uiTheme": "vs",
-        "path": "./themes/light-colorblind.json"
+        "path": "./themes/light-ex.json"
       },
       {
         "label": "KurBo Dark",
         "uiTheme": "vs-dark",
-        "path": "./themes/dark-default.json"
+        "path": "./themes/dark.json"
       },
       {
-        "label": "KurBo Dark Colorblind (Beta)",
+        "label": "KurBo Dark Extended",
         "uiTheme": "vs-dark",
-        "path": "./themes/dark-colorblind.json"
-      },
-      {
-        "label": "KurBo Dark Dimmed",
-        "uiTheme": "vs-dark",
-        "path": "./themes/dark-dimmed.json"
+        "path": "./themes/dark-ex.json"
       }
     ]
   },

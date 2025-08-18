@@ -13,18 +13,17 @@ import { getColors, pictaColors, Colors, Theme } from "./colors.js";
 
 interface Options {
   light?: string | undefined;
-  light_colorblind?: string | undefined;
   dark?: string | undefined;
-  dark_colorblind?: string | undefined;
-  dark_dimmed?: string | undefined;
 }
 
 export default function getTheme({
   theme,
   name,
+  extended,
 }: {
   theme: Theme;
   name: string;
+  extended: boolean;
 }) {
   // Usage: themes({ light: "lightblue", light_high_contrast: "lightblue", light_colorblind: "lightblue", dark: "darkblue", dark_high_contrast: "darkblue", dark_colorblind: "darkblue", dark_dimmed: "royalblue" })
   const themes = (options: Options) => options[theme];
@@ -33,21 +32,11 @@ export default function getTheme({
   const scale = color.scale; // Usage: scale.blue[6]
 
   const onlyDark = (color: string) => {
-    return themes({
-      dark: color,
-      dark_colorblind: color,
-      dark_dimmed: color,
-    });
+    return themes({ dark: color });
   };
 
   const lightDark = (light: string, dark: string) => {
-    return themes({
-      light: light,
-      light_colorblind: light,
-      dark: dark,
-      dark_colorblind: dark,
-      dark_dimmed: dark,
-    });
+    return themes({ light: light, dark: dark });
   };
   const pictaLightDark = (p: { medium: string; light: string }) =>
     lightDark(p.medium, p.light);
@@ -609,10 +598,14 @@ export default function getTheme({
       {
         name: "Constant",
         scope: ["variable.other.constant", "support.constant"],
-        settings: {
-          foreground: pictaLightDark(pictaColors.orange),
-          fontStyle: "underline",
-        },
+        settings: extended
+          ? {
+              foreground: pictaLightDark(pictaColors.orange),
+              fontStyle: "underline",
+            }
+          : {
+              foreground: pictaLightDark(pictaColors.orange),
+            },
       },
       {
         name: "Property",
@@ -627,7 +620,7 @@ export default function getTheme({
         scope: "variable.other.constant.property",
         settings: {
           foreground: pictaLightDark(pictaColors.orange),
-          fontStyle: "italic underline",
+          fontStyle: extended ? "italic underline" : "italic",
         },
       },
       {
@@ -883,7 +876,7 @@ export default function getTheme({
       },
       "parameter.readonly": {
         foreground: pictaLightDark(pictaColors.orange),
-        fontStyle: "bold underline",
+        fontStyle: extended ? "bold underline" : "bold",
       },
       typeParameter: {
         foreground: pictaLightDark(pictaColors.indigo),
@@ -892,11 +885,11 @@ export default function getTheme({
       // a work-around for clangd’s handling of non-type template parameters
       "typeParameter.readonly:cpp": {
         foreground: pictaLightDark(pictaColors.orange),
-        fontStyle: "bold underline",
+        fontStyle: extended ? "bold underline" : "bold",
       },
       // clangd marks non-type dependent names this way
       "unknown.dependentName:cpp": {
-        foreground: pictaLightDark(pictaColors.yellow)
+        foreground: pictaLightDark(pictaColors.yellow),
       },
     },
   };

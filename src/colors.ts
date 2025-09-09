@@ -49,7 +49,7 @@ export const pictaColors = {
   yellow: { medium: "#bc8700", light: "#ffc960" },
   olive: { medium: "#7c8200", light: "#c6ce59" },
   green: { medium: "#22893a", light: "#56da70" },
-  cyan: { medium: "#008a92", light: "#52d2dd" },
+  cyan: { medium: "#008a92", light: "#50d4cf" },
   blue: { medium: "#0052ac", light: "#75bfff" },
   indigo: { medium: "#633ac1", light: "#c1b1ff" },
   purple: { medium: "#ab44c5", light: "#e8a1ff" },

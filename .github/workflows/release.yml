@@ -6,7 +6,7 @@ on:
 jobs:
   release:
     name: Final
-    if: ${{ github.repository == 'KurtBoehm/kurbo-vscode-theme' }}
+    if: ${{ github.repository == 'KurtBoehm/picta-vscode-theme' }}
 
     runs-on: ubuntu-latest
     steps:

@@ -10,6 +10,6 @@ Please provide before/after screenshots for any visual changes
 
 - [ ] Added/updated colors
 - [ ] Added/updated documentation/README
-- [ ] Tested in `KurBo Light` theme
+- [ ] Tested in `Picta Light` theme
 
-Take a look at the [Contribute](https://github.com/KurtBoehm/kurbo-vscode-theme#contribute) section for more information on how test your changes locally.
+Take a look at the [Contribute](https://github.com/KurtBoehm/picta-vscode-theme#contribute) section for more information on how test your changes locally.

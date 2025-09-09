@@ -3,23 +3,23 @@ import getTheme from "./theme";
 
 const lightTheme = getTheme({
   theme: "light",
-  name: "KurBo Light",
+  name: "Picta Light",
   extended: false,
 });
 const lightThemeEx = getTheme({
   theme: "light",
-  name: "KurBo Light Extended",
+  name: "Picta Light Extended",
   extended: true,
 });
 
 const darkTheme = getTheme({
   theme: "dark",
-  name: "KurBo Dark",
+  name: "Picta Dark",
   extended: false,
 });
 const darkThemeEx = getTheme({
   theme: "dark",
-  name: "KurBo Dark Extended",
+  name: "Picta Dark Extended",
   extended: true,
 });
 

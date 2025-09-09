@@ -31,21 +31,15 @@ export default function getTheme({
   const color = changeColorToHexAlphas(rawColors);
   const scale = color.scale; // Usage: scale.blue[6]
 
-  const onlyDark = (color: string) => {
-    return themes({ dark: color });
-  };
-
-  const lightDark = (light: string, dark: string) => {
-    return themes({ light: light, dark: dark });
-  };
+  const onlyDark = (color: string) => themes({ dark: color });
+  const lightDark = (light: string, dark: string) =>
+    themes({ light: light, dark: dark });
   const pictaLightDark = (p: { medium: string; light: string }) =>
     lightDark(p.medium, p.light);
-
-  const alpha = (color: string, alpha: number) => {
-    return chroma(color)
+  const alpha = (color: string, alpha: number) =>
+    chroma(color)
       .alpha(alpha)
       .hex();
-  };
 
   return {
     name: name,

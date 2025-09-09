@@ -1,7 +1,7 @@
 {
-  "name": "kurbo-vscode-theme",
-  "displayName": "KurBo Theme",
-  "description": "KurBo theme for VS Code",
+  "name": "picta-vscode-theme",
+  "displayName": "Picta Theme",
+  "description": "Picta theme for VS Code",
   "version": "6.3.5",
   "publisher": "KurtBoehm",
   "license": "MIT",
@@ -12,10 +12,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/KurtBoehm/kurbo-vscode-theme"
+    "url": "https://github.com/KurtBoehm/picta-vscode-theme"
   },
   "bugs": {
-    "url": "https://github.com/KurtBoehm/kurbo-vscode-theme/issues"
+    "url": "https://github.com/KurtBoehm/picta-vscode-theme/issues"
   },
   "engines": {
     "vscode": "^1.43.0"
@@ -34,22 +34,22 @@
   "contributes": {
     "themes": [
       {
-        "label": "KurBo Light",
+        "label": "Picta Light",
         "uiTheme": "vs",
         "path": "./themes/light.json"
       },
       {
-        "label": "KurBo Light Extended",
+        "label": "Picta Light Extended",
         "uiTheme": "vs",
         "path": "./themes/light-ex.json"
       },
       {
-        "label": "KurBo Dark",
+        "label": "Picta Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/dark.json"
       },
       {
-        "label": "KurBo Dark Extended",
+        "label": "Picta Dark Extended",
         "uiTheme": "vs-dark",
         "path": "./themes/dark-ex.json"
       }
@@ -68,7 +68,7 @@
   "scripts": {
     "start": "tsx watch src src/index.ts",
     "build": "npx tsx src/index.ts && mkdir -p build",
-    "package": "vsce package -o ./build/kurbo-vscode-theme.vsix",
+    "package": "vsce package -o ./build/picta-vscode-theme.vsix",
     "prepublishOnly": "npm run build && vsce publish",
     "release": "changeset publish"
   },

@@ -1,4 +1,4 @@
-# KurBo VS Code themes
+# Picta VS Code themes
 
 This is a fork of the GitHub themes with a lot more extensive source code colouring.
 
@@ -6,16 +6,16 @@ This is a fork of the GitHub themes with a lot more extensive source code colour
 
 ## Install
 
-1. Go to [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=KurtBoehm.kurbo-vscode-theme).
+1. Go to [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=KurtBoehm.picta-vscode-theme).
 2. Click on the "Install" button.
 3. Then [select a theme](https://code.visualstudio.com/docs/getstarted/themes#_selecting-the-color-theme). The GitHub themes try to match the themes available in [github.com's settings](https://github.com/settings/appearance):
-    - `KurBo Light`
-    - `KurBo Light High Contrast` ✨ new ✨
-    - `KurBo Light Colorblind` ✨ new ✨
-    - `KurBo Dark`
-    - `KurBo Dark High Contrast`
-    - `KurBo Dark Colorblind` ✨ new ✨
-    - `KurBo Dark Dimmed`
+    - `Picta Light`
+    - `Picta Light High Contrast` ✨ new ✨
+    - `Picta Light Colorblind` ✨ new ✨
+    - `Picta Dark`
+    - `Picta Dark High Contrast`
+    - `Picta Dark Colorblind` ✨ new ✨
+    - `Picta Dark Dimmed`
 
 ## Override this theme
 
@@ -23,11 +23,11 @@ To override this (or any other) theme in your personal config file, please follo
 
 ## Contribute
 
-1. Clone and open this [repo](https://github.com/KurtBoehm/kurbo-vscode-theme) in VS Code
+1. Clone and open this [repo](https://github.com/KurtBoehm/picta-vscode-theme) in VS Code
 2. Run `yarn` to install the dependencies.
 3. Press `F5` to open a new window with your extension loaded
-4. Open `Code > Preferences > Color Theme` [`⌘k ⌘t`] and pick the "KurBo ..." theme you want to test. Note: It seems this has to be done 2x because the first time it switches back to the default light theme. This might be a bug?
-5. Make changes to the [`/src/theme.js`](https://github.com/KurtBoehm/kurbo-vscode-theme/blob/master/src/theme.js) file.
+4. Open `Code > Preferences > Color Theme` [`⌘k ⌘t`] and pick the "Picta ..." theme you want to test. Note: It seems this has to be done 2x because the first time it switches back to the default light theme. This might be a bug?
+5. Make changes to the [`/src/theme.js`](https://github.com/KurtBoehm/picta-vscode-theme/blob/master/src/theme.js) file.
     - **UI**: For all changes to the "outer UI", like (status bar, file navigation etc.), take a look at the [Theme Color](https://code.visualstudio.com/api/references/theme-color) reference.
     - **Syntax**: For changes to the "code highlighting", examine the syntax scopes by invoking the [`Developer: Inspect Editor Tokens and Scopes`](https://code.visualstudio.com/api/language-extensions/syntax-highlight-guide#scope-inspector) command from the Command Palette (`Ctrl+Shift+P` or `Cmd+Shift+P` on Mac) in the Extension Development Host window.
 6. Run `yarn build` to update the theme. You can also run `yarn start` instead to automatically rebuild the theme while making changes and no reloading should be necessary.
@@ -41,4 +41,4 @@ Note:
 
 > Note: Publishing a new version of this theme is only meant for maintainers.
 
-This repo uses [changesets](https://github.com/atlassian/changesets) to automatically make updates to [CHANGELOG.md](https://github.com/KurtBoehm/kurbo-vscode-theme/blob/main/CHANGELOG.md) and publish a new version to the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=KurtBoehm.kurbo-vscode-theme).
+This repo uses [changesets](https://github.com/atlassian/changesets) to automatically make updates to [CHANGELOG.md](https://github.com/KurtBoehm/picta-vscode-theme/blob/main/CHANGELOG.md) and publish a new version to the [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=KurtBoehm.picta-vscode-theme).

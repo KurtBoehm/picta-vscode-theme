@@ -34,7 +34,7 @@ body:
     attributes:
       label: Version
       description: 'What version of `picta-vscode-theme` are you using?'
-      placeholder: v6.3.2
+      placeholder: v1.0.0
     validations:
       required: true
   - type: dropdown

@@ -2,7 +2,7 @@
   "name": "picta-vscode-theme",
   "displayName": "Picta Theme",
   "description": "Picta theme for VS Code",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "KurtBoehm",
   "license": "MIT",
   "icon": "icon.png",

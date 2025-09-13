@@ -868,6 +868,9 @@ export default function getTheme({
         foreground: pictaLightDark(pictaColors.green),
         fontStyle: "italic",
       },
+      module: {
+        foreground: pictaLightDark(pictaColors.pink),
+      },
       "parameter.readonly": {
         foreground: pictaLightDark(pictaColors.orange),
         fontStyle: extended ? "bold underline" : "bold",

@@ -2,7 +2,7 @@
   "name": "picta-vscode-theme",
   "displayName": "Picta Theme",
   "description": "Picta theme for VS Code",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "KurtBoehm",
   "license": "MIT",
   "icon": "icon.png",
@@ -25,11 +25,9 @@
   ],
   "keywords": [
     "theme",
-    "github",
+    "picta",
     "light",
-    "dark",
-    "protanopia",
-    "colorblind"
+    "dark"
   ],
   "contributes": {
     "themes": [
@@ -56,7 +54,6 @@
     ]
   },
   "devDependencies": {
-    "@changesets/changelog-github": "^0.4.1",
     "@changesets/cli": "^2.17.0",
     "@primer/primitives": "7.10.0",
     "@types/chroma-js": "^3.1.1",

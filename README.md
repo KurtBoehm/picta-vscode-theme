@@ -2,7 +2,9 @@
 
 _Picta_ (Latin “decorated, painted, coloured”) is a fork of the GitHub VS Code themes providing much more complete source code highlighting with a modified and extended colour palette:
 
-<img width="320" src="gh/swatch.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;margin-bottom: 1em" />
+<p align="center">
+  <a title="Learn more about Bookmarks" href="http://github.com/KurtBoehm/picta-vscode-theme"><img src="https://raw.githubusercontent.com/KurtBoehm/picta-vscode-theme/refs/heads/main/gh/swatch.png" alt="Bookmarks Logo" width="50%" /></a>
+</p>
 
 These colours have the following general meanings:
 
@@ -24,7 +26,7 @@ The _Extended_ themes additionally underline constants (if the language support 
 
 The extended themes look as follows when applied to a C++ program using `clangd`:
 
-![Screenshots](gh/screenshot.png)
+![Screenshots](https://raw.githubusercontent.com/KurtBoehm/picta-vscode-theme/refs/heads/main/gh/screenshot.png)
 
 ## Install
 

@@ -1,5 +1,9 @@
 # picta-vscode-theme
 
+## 1.0.2
+
+- Properly handle `method` semantic tokens
+
 ## 1.0.1
 
 - Properly handle `module` semantic tokens

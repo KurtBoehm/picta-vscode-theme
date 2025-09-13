@@ -1,0 +1,26 @@
+<svg viewBox="-0.5 -0.5 15.5 4" xmlns="http://www.w3.org/2000/svg">
+  <rect x="-0.5" y="-0.5" width="15.5" height="2" fill="#fff" />
+  <rect x="-0.5" y="1.5" width="15.5" height="2" fill="#0d1117" />
+
+  <rect x="00.0" y="0" width="1" height="1" fill="#ce2233" />
+  <rect x="01.5" y="0" width="1" height="1" fill="#d76500" />
+  <rect x="03.0" y="0" width="1" height="1" fill="#bc8700" />
+  <rect x="04.5" y="0" width="1" height="1" fill="#7c8200" />
+  <rect x="06.0" y="0" width="1" height="1" fill="#22893a" />
+  <rect x="07.5" y="0" width="1" height="1" fill="#00899b" />
+  <rect x="09.0" y="0" width="1" height="1" fill="#0052ac" />
+  <rect x="10.5" y="0" width="1" height="1" fill="#633ac1" />
+  <rect x="12.0" y="0" width="1" height="1" fill="#ab44c5" />
+  <rect x="13.5" y="0" width="1" height="1" fill="#d33887" />
+
+  <rect x="00.0" y="2" width="1" height="1" fill="#ff7a80" />
+  <rect x="01.5" y="2" width="1" height="1" fill="#ff9566" />
+  <rect x="03.0" y="2" width="1" height="1" fill="#ffc960" />
+  <rect x="04.5" y="2" width="1" height="1" fill="#c6ce59" />
+  <rect x="06.0" y="2" width="1" height="1" fill="#56da70" />
+  <rect x="07.5" y="2" width="1" height="1" fill="#50d4cf" />
+  <rect x="09.0" y="2" width="1" height="1" fill="#75bfff" />
+  <rect x="10.5" y="2" width="1" height="1" fill="#c1b1ff" />
+  <rect x="12.0" y="2" width="1" height="1" fill="#e8a1ff" />
+  <rect x="13.5" y="2" width="1" height="1" fill="#ff9ec5" />
+</svg>

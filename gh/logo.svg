@@ -1,0 +1,22 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath clipPathUnits="userSpaceOnUse" id="b">
+      <path d="M0 0h512L0 512z"/>
+    </clipPath>
+    <clipPath clipPathUnits="userSpaceOnUse" id="a">
+      <rect width="512" height="512" ry="128"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#a)">
+    <path fill="#0d1117" d="M512 0v512H0z"/>
+    <text style="font-size:192;text-align:start" x="257.42395" y="310.336">
+      <tspan x="255.42395" y="310.336" style="font-weight:400;font-family:'Ubuntu Sans',sans-serif;text-anchor:middle"><tspan fill="#ff7a80">p</tspan><tspan fill="#ff9566">i</tspan><tspan fill="#56da70">c</tspan><tspan fill="#75bfff">t</tspan><tspan fill="#ff9ec5">a</tspan></tspan>
+    </text>
+    <g clip-path="url(#b)">
+      <path fill="#fff" d="M0 0h512L0 512z"/>
+      <text style="font-size:192;text-align:start" x="257.42395" y="310.336">
+        <tspan x="255.42395" y="310.336" style="font-weight:400;font-family:'Ubuntu Sans',sans-serif;text-anchor:middle"><tspan fill="#ce2233">p</tspan><tspan fill="#d76500">i</tspan><tspan fill="#22893a">c</tspan><tspan fill="#0052ac">t</tspan><tspan fill="#d33887">a</tspan></tspan>
+      </text>
+    </g>
+  </g>
+</svg>

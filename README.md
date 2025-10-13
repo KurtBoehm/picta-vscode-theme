@@ -1,9 +1,9 @@
 # Picta VS Code Themes
 
-_Picta_ (Latin “decorated, painted, coloured”) is a fork of the GitHub VS Code themes providing much more complete source code highlighting with a modified and extended colour palette:
+_Picta_ (Latin “decorated, painted, coloured”) is a fork of the [GitHub VS Code themes](https://github.com/primer/github-vscode-theme) providing much more complete source code highlighting with a modified and extended colour palette:
 
 <p align="center">
-  <a title="Learn more about Bookmarks" href="http://github.com/KurtBoehm/picta-vscode-theme"><img src="https://raw.githubusercontent.com/KurtBoehm/picta-vscode-theme/refs/heads/main/gh/swatch.png" alt="Bookmarks Logo" width="50%" /></a>
+  <a title="Colour Swatch" href="http://github.com/KurtBoehm/picta-vscode-theme"><img src="https://raw.githubusercontent.com/KurtBoehm/picta-vscode-theme/refs/heads/main/gh/swatch.png" alt="Colour Swatch" width="50%" /></a>
 </p>
 
 These colours have the following general meanings:

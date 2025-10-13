@@ -1,5 +1,9 @@
 # picta-vscode-theme
 
+## 1.0.4
+
+- Fix a packaging error.
+
 ## 1.0.3
 
 - Handle the `argument`, `classMember`, and `readonly` token modifiers consistently.

@@ -863,13 +863,13 @@ export default function getTheme({
     semanticTokenColors: {
       // custom modifier in basedpyright
       "*.argument": {
-        bold: true
+        bold: true,
       },
       // custom modifier in basedpyright
       "*.classMember": {
-        italic: true
+        italic: true,
       },
-      "*.readonly": extended ? { underline: true} : {},
+      "*.readonly": extended ? { underline: true } : {},
       concept: {
         foreground: pictaLightDark(pictaColors.purple),
       },
@@ -883,6 +883,9 @@ export default function getTheme({
       method: {
         foreground: pictaLightDark(pictaColors.green),
         fontStyle: "italic",
+      },
+      namespace: {
+        foreground: pictaLightDark(pictaColors.pink),
       },
       typeParameter: {
         foreground: pictaLightDark(pictaColors.indigo),

@@ -1,5 +1,13 @@
 # picta-vscode-theme
 
+## 1.0.6
+
+- Fix the wrong explicit `namespace` colour.
+
+## 1.0.5
+
+- Explicitly highlight `namespace` semantic tokens, which do not seem to be resolved correctly on Windows.
+
 ## 1.0.4
 
 - Fix a packaging error.

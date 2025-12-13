@@ -1,5 +1,9 @@
 # picta-vscode-theme
 
+## 1.0.7
+
+- Define new Picta colours based on previously-used GitHub colours.
+
 ## 1.0.6
 
 - Fix the wrong explicit `namespace` colour.
@@ -18,13 +22,13 @@
 
 ## 1.0.2
 
-- Properly handle `method` semantic tokens
+- Properly handle `method` semantic tokens.
 
 ## 1.0.1
 
-- Properly handle `module` semantic tokens
-- Fix keywords and screenshots
+- Properly handle `module` semantic tokens.
+- Fix keywords and screenshots.
 
 ## 1.0.0
 
-- Initial release
+- Initial release.

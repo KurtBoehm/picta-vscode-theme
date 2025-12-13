@@ -36,6 +36,8 @@ export default function getTheme({
     themes({ light: light, dark: dark });
   const pictaLightDark = (p: { medium: string; light: string }) =>
     lightDark(p.medium, p.light);
+  const pictaVeryLightDark = (p: { dark: string; veryLight: string }) =>
+    lightDark(p.dark, p.veryLight);
   const alpha = (color: string, alpha: number) =>
     chroma(color)
       .alpha(alpha)
@@ -436,7 +438,7 @@ export default function getTheme({
       {
         scope: ["comment", "punctuation.definition.comment", "string.comment"],
         settings: {
-          foreground: lightDark(scale.gray[5], scale.gray[3]),
+          foreground: pictaLightDark(pictaColors.grey),
         },
       },
       {
@@ -543,7 +545,7 @@ export default function getTheme({
         name: "String",
         scope: ["string", "string punctuation.section.embedded source"],
         settings: {
-          foreground: lightDark(scale.blue[8], scale.blue[1]),
+          foreground: pictaVeryLightDark(pictaColors.blue),
         },
       },
       {

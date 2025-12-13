@@ -44,13 +44,19 @@ export function getColors(theme: Theme): Colors {
 }
 
 export const pictaColors = {
+  grey: { medium: "#6e7781", light: "#8b949e" },
   red: { medium: "#ce2233", light: "#ff7a80" },
   orange: { medium: "#d76500", light: "#ff9566" },
   yellow: { medium: "#bc8700", light: "#ffc960" },
   olive: { medium: "#7c8200", light: "#c6ce59" },
   green: { medium: "#22893a", light: "#56da70" },
   cyan: { medium: "#00899b", light: "#50d4cf" },
-  blue: { medium: "#0052ac", light: "#75bfff" },
+  blue: {
+    dark: "#0a3069",
+    medium: "#0052ac",
+    light: "#75bfff",
+    veryLight: "#a5d6ff",
+  },
   indigo: { medium: "#633ac1", light: "#c1b1ff" },
   purple: { medium: "#ab44c5", light: "#e8a1ff" },
   pink: { medium: "#d33887", light: "#ff9ec5" },

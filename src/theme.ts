@@ -149,7 +149,7 @@ export default function getTheme({
       "statusBarItem.remoteForeground": color.fg.default,
       "statusBarItem.remoteBackground": lightDark(
         color.scale.gray[1],
-        color.scale.gray[6]
+        color.scale.gray[6],
       ),
       "statusBarItem.hoverBackground": alpha(color.fg.default, 0.08),
       "statusBarItem.activeBackground": alpha(color.fg.default, 0.12),
@@ -214,47 +214,47 @@ export default function getTheme({
 
       "diffEditor.insertedLineBackground": lightDark(
         alpha(scale.green[1], 0.3),
-        alpha(scale.green[5], 0.15)
+        alpha(scale.green[5], 0.15),
       ),
       "diffEditor.insertedTextBackground": lightDark(
         alpha(scale.green[2], 0.5),
-        alpha(scale.green[3], 0.3)
+        alpha(scale.green[3], 0.3),
       ),
       "diffEditor.removedLineBackground": lightDark(
         alpha(scale.red[1], 0.3),
-        alpha(scale.red[5], 0.15)
+        alpha(scale.red[5], 0.15),
       ),
       "diffEditor.removedTextBackground": lightDark(
         alpha(scale.red[3], 0.4),
-        alpha(scale.red[3], 0.3)
+        alpha(scale.red[3], 0.3),
       ),
 
       "scrollbar.shadow": alpha(scale.gray[5], 0.2),
       "scrollbarSlider.background": lightDark(
         alpha(scale.gray[4], 0.2),
-        alpha(scale.gray[3], 0.2)
+        alpha(scale.gray[3], 0.2),
       ),
       "scrollbarSlider.hoverBackground": lightDark(
         alpha(scale.gray[4], 0.24),
-        alpha(scale.gray[3], 0.24)
+        alpha(scale.gray[3], 0.24),
       ),
       "scrollbarSlider.activeBackground": lightDark(
         alpha(scale.gray[4], 0.28),
-        alpha(scale.gray[3], 0.28)
+        alpha(scale.gray[3], 0.28),
       ),
       "editorOverviewRuler.border": lightDark(scale.white, scale.black),
 
       "minimapSlider.background": lightDark(
         alpha(scale.gray[4], 0.2),
-        alpha(scale.gray[3], 0.2)
+        alpha(scale.gray[3], 0.2),
       ),
       "minimapSlider.hoverBackground": lightDark(
         alpha(scale.gray[4], 0.24),
-        alpha(scale.gray[3], 0.24)
+        alpha(scale.gray[3], 0.24),
       ),
       "minimapSlider.activeBackground": lightDark(
         alpha(scale.gray[4], 0.28),
-        alpha(scale.gray[3], 0.28)
+        alpha(scale.gray[3], 0.28),
       ),
 
       "panel.background": color.canvas.inset,
@@ -269,16 +269,16 @@ export default function getTheme({
       "debugConsole.infoForeground": lightDark(scale.gray[6], scale.gray[3]),
       "debugConsole.warningForeground": lightDark(
         scale.yellow[6],
-        scale.yellow[3]
+        scale.yellow[3],
       ),
       "debugConsole.errorForeground": lightDark(scale.red[5], scale.red[2]),
       "debugConsole.sourceForeground": lightDark(
         scale.yellow[5],
-        scale.yellow[2]
+        scale.yellow[2],
       ),
       "debugConsoleInputIcon.foreground": lightDark(
         scale.purple[6],
-        scale.purple[3]
+        scale.purple[3],
       ),
 
       "debugTokenExpression.name": lightDark(scale.blue[6], scale.blue[2]),
@@ -294,36 +294,36 @@ export default function getTheme({
       "symbolIcon.colorForeground": lightDark(scale.blue[8], scale.blue[2]),
       "symbolIcon.constructorForeground": lightDark(
         scale.purple[8],
-        scale.purple[2]
+        scale.purple[2],
       ),
       "symbolIcon.enumeratorForeground": lightDark(
         scale.orange[6],
-        scale.orange[3]
+        scale.orange[3],
       ),
       "symbolIcon.enumeratorMemberForeground": lightDark(
         scale.blue[6],
-        scale.blue[3]
+        scale.blue[3],
       ),
       "symbolIcon.eventForeground": lightDark(scale.gray[6], scale.gray[4]),
       "symbolIcon.fieldForeground": lightDark(scale.orange[6], scale.orange[3]),
       "symbolIcon.fileForeground": lightDark(scale.yellow[6], scale.yellow[3]),
       "symbolIcon.folderForeground": lightDark(
         scale.yellow[6],
-        scale.yellow[3]
+        scale.yellow[3],
       ),
       "symbolIcon.functionForeground": lightDark(
         scale.purple[6],
-        scale.purple[3]
+        scale.purple[3],
       ),
       "symbolIcon.interfaceForeground": lightDark(
         scale.orange[6],
-        scale.orange[3]
+        scale.orange[3],
       ),
       "symbolIcon.keyForeground": lightDark(scale.blue[6], scale.blue[3]),
       "symbolIcon.keywordForeground": lightDark(scale.red[6], scale.red[3]),
       "symbolIcon.methodForeground": lightDark(
         scale.purple[6],
-        scale.purple[3]
+        scale.purple[3],
       ),
       "symbolIcon.moduleForeground": lightDark(scale.red[6], scale.red[3]),
       "symbolIcon.namespaceForeground": lightDark(scale.red[6], scale.red[3]),
@@ -331,37 +331,37 @@ export default function getTheme({
       "symbolIcon.numberForeground": lightDark(scale.green[6], scale.green[3]),
       "symbolIcon.objectForeground": lightDark(
         scale.orange[6],
-        scale.orange[3]
+        scale.orange[3],
       ),
       "symbolIcon.operatorForeground": lightDark(scale.blue[8], scale.blue[2]),
       "symbolIcon.packageForeground": lightDark(
         scale.orange[6],
-        scale.orange[3]
+        scale.orange[3],
       ),
       "symbolIcon.propertyForeground": lightDark(
         scale.orange[6],
-        scale.orange[3]
+        scale.orange[3],
       ),
       "symbolIcon.referenceForeground": lightDark(scale.blue[6], scale.blue[3]),
       "symbolIcon.snippetForeground": lightDark(scale.blue[6], scale.blue[3]),
       "symbolIcon.stringForeground": lightDark(scale.blue[8], scale.blue[2]),
       "symbolIcon.structForeground": lightDark(
         scale.orange[6],
-        scale.orange[3]
+        scale.orange[3],
       ),
       "symbolIcon.textForeground": lightDark(scale.blue[8], scale.blue[2]),
       "symbolIcon.typeParameterForeground": lightDark(
         scale.blue[8],
-        scale.blue[2]
+        scale.blue[2],
       ),
       "symbolIcon.unitForeground": lightDark(scale.blue[6], scale.blue[3]),
       "symbolIcon.variableForeground": lightDark(
         scale.orange[6],
-        scale.orange[3]
+        scale.orange[3],
       ),
       "symbolIcon.constantForeground": lightDark(
         scale.green[6],
-        scale.green[3]
+        scale.green[3],
       ),
 
       "terminal.foreground": color.fg.default,
@@ -384,27 +384,27 @@ export default function getTheme({
 
       "editorBracketHighlight.foreground1": lightDark(
         scale.blue[5],
-        scale.blue[2]
+        scale.blue[2],
       ),
       "editorBracketHighlight.foreground2": lightDark(
         scale.green[5],
-        scale.green[2]
+        scale.green[2],
       ),
       "editorBracketHighlight.foreground3": lightDark(
         scale.yellow[5],
-        scale.yellow[2]
+        scale.yellow[2],
       ),
       "editorBracketHighlight.foreground4": lightDark(
         scale.red[5],
-        scale.red[2]
+        scale.red[2],
       ),
       "editorBracketHighlight.foreground5": lightDark(
         scale.pink[5],
-        scale.pink[2]
+        scale.pink[2],
       ),
       "editorBracketHighlight.foreground6": lightDark(
         scale.purple[5],
-        scale.purple[2]
+        scale.purple[2],
       ),
       "editorBracketHighlight.unexpectedBracket.foreground": color.fg.muted, // gray
 
@@ -421,10 +421,10 @@ export default function getTheme({
       "editor.focusedStackFrameHighlightBackground": color.success.muted,
 
       "peekViewEditor.matchHighlightBackground": onlyDark(
-        color.attention.muted
+        color.attention.muted,
       ),
       "peekViewResult.matchHighlightBackground": onlyDark(
-        color.attention.muted
+        color.attention.muted,
       ),
       "peekViewEditor.background": onlyDark(color.neutral.subtle),
       "peekViewResult.background": onlyDark(scale.gray[9]),
@@ -865,6 +865,10 @@ export default function getTheme({
     semanticTokenColors: {
       // custom modifier in basedpyright
       "*.argument": {
+        bold: true,
+      },
+      // custom modifier in basedpyright
+      "*.parameter": {
         bold: true,
       },
       // custom modifier in basedpyright

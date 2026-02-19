@@ -1,5 +1,9 @@
 # picta-vscode-theme
 
+## 1.0.8
+
+- Handle the `parameter` token modifier used by newer versions of `basedpyright`.
+
 ## 1.0.7
 
 - Define new Picta colours based on previously-used GitHub colours.

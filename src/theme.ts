@@ -572,7 +572,6 @@ export default function getTheme({
         scope: [
           "entity.name",
           "entity.name.function.definition.special.member.destructor",
-          "entity.name.namespace.cpp",
           "entity.name.scope-resolution",
           "entity.name.type",
           "storage.type.built-in",
@@ -582,6 +581,13 @@ export default function getTheme({
         ],
         settings: {
           foreground: pictaLightDark(pictaColors.indigo),
+        },
+      },
+      {
+        name: "Concept",
+        scope: ["entity.name.type.concept"],
+        settings: {
+          foreground: pictaLightDark(pictaColors.purple),
         },
       },
       {

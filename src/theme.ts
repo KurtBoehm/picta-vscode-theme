@@ -912,6 +912,10 @@ export default function getTheme({
       "unknown.dependentName:cpp": {
         foreground: pictaLightDark(pictaColors.yellow),
       },
+      "unknown.dependentName.classScope:cpp": {
+        foreground: pictaLightDark(pictaColors.yellow),
+        fontStyle: "italic",
+      },
     },
   };
 }
